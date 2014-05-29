@@ -9,5 +9,8 @@
 	<classpathentry kind="lib" path="E:/Development/httpcomponents-client-4.3.3/lib/fluent-hc-4.3.3.jar"/>
 	<classpathentry kind="lib" path="E:/Development/httpcomponents-client-4.3.3/lib/httpclient-cache-4.3.3.jar"/>
 	<classpathentry kind="lib" path="E:/Development/httpcomponents-client-4.3.3/lib/httpmime-4.3.3.jar"/>
+	<classpathentry kind="lib" path="E:/Development/flexjson-3.2.jar"/>
+	<classpathentry kind="lib" path="E:/Development/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="E:/Development/commons-httpclient-3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
