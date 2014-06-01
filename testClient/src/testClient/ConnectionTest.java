@@ -11,36 +11,26 @@ public class ConnectionTest {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		  Integer doubledValue =5;
 		
-		try {
-			URL url = new URL("http://localhost:8080/gradle-test-0.1.0");
-			URLConnection connection = url.openConnection();
-			
-			//inputString
-			String input = "test-from-client";
-			
-			connection.setDoOutput(true);
-			OutputStreamWriter out = new OutputStreamWriter(connection.getOutputStream());
-			out.write(input);
-			out.close();
-			
-			BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
-			
-            String returnString="";
-            
-            while ((returnString = in.readLine()) != null) 
-            {
-                doubledValue= Integer.parseInt(returnString);
-            }
-            in.close();
-            
-            System.out.println(doubledValue);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		String host = "http://87.106.189.151:8080/cp422/usermanagement/";
+		
+		//creates User on Client
+		String userClient = CompareConnectionManager.createUser("MaxDoe1966", "23453sf");
+		
+		//Sends User as Json to spring Controller and then save User to Database
+		CompareConnectionManager.connection(userClient, host + "Register");
+		
+		//Sends User as Json to spring Controller and checks, if User is in Database
+		CompareConnectionManager.connection(userClient, host + "Anmelden");
+		
+		//Changes Passwort of given User
+		//Checks, if old passwort is korrekt
+		CompareConnectionManager.connection(userClient, host + "changePassword");
+				
+		
+		// Delete given User
+		CompareConnectionManager.connection(userClient, host + "Delete");
 		
 	}
-
+	
 }
