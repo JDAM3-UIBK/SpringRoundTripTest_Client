@@ -35,7 +35,7 @@ public class ConnectionTest02 {
 		final HttpClient httpClient = new HttpClient();
 		
 		String postMessage = "jr in Json Test";
-		User user = new User("hans12", "342");
+		User user = new User("hansjochen99", "34224");
 		
 		String jsonString = user.toJson();
 		
@@ -48,7 +48,9 @@ public class ConnectionTest02 {
 			
 			
 			System.out.println(requestEntity.toString());
-			PostMethod postMethod = new PostMethod("http://localhost:8080/cp418/usermanagement");
+			
+			//87.106.189.151
+			PostMethod postMethod = new PostMethod("http://87.106.189.151:8080/cp422/usermanagement");
 			postMethod.setRequestEntity(requestEntity);
 			int status = httpClient.executeMethod(postMethod);
 			
