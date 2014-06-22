@@ -53,14 +53,14 @@ public class CompareConnectionManager {
 			//postMethod.setHostConfiguration(hf);
 			postMethod.setRequestEntity(requestEntity);
 			
-			System.out.println(requestEntity.toString());
+			//System.out.println(requestEntity.toString());
 			
 			status = httpClient.executeMethod(postMethod);
 			
-			System.out.println("status: " + status);
+			//System.out.println("status: " + status);
 			
 			String tmp = postMethod.getResponseBodyAsString();
-			System.out.println("responseBody: " + tmp);
+			//System.out.println("responseBody: " + tmp);
 			
 			postMethod.releaseConnection();
 			

@@ -11,8 +11,11 @@ public class ConnectionTestLocal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println("!----------User Test--------------!");
+		String host = "http://localhost:8080/cp424/usermanagement/";
+		String userClient6 = CompareConnectionManager.createUser("jochen", "23453sf");
+		CompareConnectionManager.connection(userClient6, host + "Anmelden");
 		
-		String host = "http://localhost:8080/cp423/usermanagement/";
 		
 		//creates User on Client
 		//right user
@@ -46,9 +49,9 @@ public class ConnectionTestLocal {
 		
 		System.out.println("!----------Route Test--------------!");
 		
-		String hostroute = "http://localhost:8080/cp423/routemanagement/";
+		String hostroute = "http://localhost:8080/cp424/routemanagement/";
 		
-		Date date = new Date(23424);
+		Date date = new Date(23123);
 		System.out.println(date);
 		
 		List<LoggedRoute> list = new ArrayList<LoggedRoute>();
@@ -70,7 +73,7 @@ public class ConnectionTestLocal {
 		CompareConnectionManager.connection(testRoute, hostroute + "showRoutePerUser");
 		
 		//Suche nach Route mit Id
-		CompareConnectionManager.connectionGET("http://localhost:8080/cp423/routemanagement/findRouteWithId?id=2");
+		CompareConnectionManager.connectionGET("http://localhost:8080/cp423/routemanagement/findRouteWithId?id=22");
 		
 		//gibt alle Routen zurück, die angegebenen Usernamen zugeordnet sind
 		CompareConnectionManager.connectionWithString(username, hostroute + "username");
