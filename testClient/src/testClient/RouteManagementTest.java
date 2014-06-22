@@ -23,7 +23,8 @@ public class RouteManagementTest {
 	
 	@BeforeClass
 	public static void setUpBeforClass(){
-		hostroute = "http://localhost:8080/cp423/routemanagement/";
+		//remoteServer:87.106.189.151
+		hostroute = "http://87.106.189.151:8080/cp423/routemanagement/";
 		
 	}
 	
@@ -55,9 +56,6 @@ public class RouteManagementTest {
 		status = CompareConnectionManager.connection(testRoute, hostroute + "saveRoute");
 		assertEquals(status, 200);
 		
-		//HttpStatus.BAD_REQUEST
-		//status = CompareConnectionManager.connection(null, hostroute + "saveRoute");
-		//assertEquals(status, 406);
 	}
 	
 	@Test

@@ -19,7 +19,7 @@ public class UserManagementTest {
 	
 	@BeforeClass
 	public static void setUpBeforClass(){
-		 host  = "http://localhost:8080/cp423/usermanagement/";
+		 host  = "http://87.106.189.151:8080/cp423/usermanagement/";
 	}
 	
 	@Before
@@ -51,7 +51,7 @@ public class UserManagementTest {
 			
 		// Delete given User
 		status = CompareConnectionManager.connection(userClientDelete, host + "Delete");
-					
+		assertEquals(status, 200);		
 		//should return 404 user not found
 		status = CompareConnectionManager.connection(userClientDelete, host + "Delete");
 		assertEquals(status, 404);
